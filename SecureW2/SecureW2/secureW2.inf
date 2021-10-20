@@ -1,0 +1,48 @@
+[Version]
+Signature = "$Windows NT$"
+Provider = "SecureW2"
+Config = 7
+
+[WZCSVC]
+Startup = AUTO
+
+;[Certificates]
+;Certificate.1 = au.der
+
+[SSID.1]
+Name = "eduroam"
+SSID = "eduroam"
+Profile = "eduroam"
+; Configuration options for connection
+AuthenticationMode = "WPA2"
+EncryptionType = "AES"
+NonBroadcast = "false"
+ConnectionMode = "auto"
+ConnectionType = "ESS"
+UseComputerCredentials = "false"
+UseGuestCredentials = "false"
+AutoSwitch = "false"
+EAPType = 21
+
+[Profile.1]
+Name = "eduroam"
+Description = "Adana Bilim ve Teknoloji Üniversitesi e-posta ve þifrenizi giriniz."
+
+UseAlternateOuterIdentity = FALSE
+;UseAnonymousOuterIdentity = TRUE
+;AlternateOuterIdentity = "kullanýcýadiniz@adanabtu.edu.tr"
+;UseSessionResumption = TRUE
+
+VerifyServerCertificate = FALSE
+;TrustedRootCA.0 = feb3073cf1ac42f425c383048b88d06e1c96fc4b
+
+AuthenticationMethod = PAP
+;EAPType = 21 ; MD5-Challenge (EAP-MD5)
+
+PromptUserForCredentials = FALSE
+UserName = PROMPTUSER
+AltUsernameString = "Kullanýcý Adý:"
+AltPasswordStr = "Parola:"
+;AltRePasswordStr = "Parola Tekrar:"
+AltCredsTitle = "Adana Bilim ve Teknoloji Üniversitesi eduroam Kablosuz Aðýna Hoþgeldiniz"
+;UserDomain = adanabtu.edu.tr
