@@ -1,0 +1,13 @@
+import java.util.Scanner;
+class Solution02{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        final float PI = 3.14f;
+        double radius = input.nextDouble();
+
+        double area = PI*radius*radius;
+        
+        System.out.println("Area of the circle with radius "+radius+" is "+area+".");
+
+    }
+}
