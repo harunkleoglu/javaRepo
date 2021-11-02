@@ -9,9 +9,9 @@ public class diceRoll {
         {
             //Pick random numbers in range of 1-6
             //d1 is first dice and d2 is second dice
-            int d1 = (int)(Math.random() * 6)+1;
             int d2 = (int)(Math.random() * 6)+1;
-
+            int d1 = (int)(Math.random() * 6)+1;
+            
             if(d1==d2 && d1==6)
             {
                 doubleSix++;
@@ -64,9 +64,9 @@ public class diceRoll {
                     dice(i);
                 }
                 else
-                {
+                    {
                     clearScreen();
-                    System.out.println("Negative Value: "+i+" is not a valid value, enter a countable number please!");
+                    System.out.println("Unvalid Value: "+i+" is not a valid value, enter a countable number please!");
                 }
             }
             else
