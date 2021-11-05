@@ -16,6 +16,7 @@ class sorter{
         numbers.add(num3);
         Collections.sort(numbers, Collections.reverseOrder());
         System.out.println("The order of numbers "+numbers);
+        input.close();
 
 
 

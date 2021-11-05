@@ -1,30 +1,45 @@
 import java.text.*;
 import java.util.*;
 public class Timer {
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
+        Timer();
+    }
+    public static void Timer()
+    {
         DecimalFormat format = new DecimalFormat("00");
         clearScreen();
-        int i=0;
         Scanner In = new Scanner(System.in);
         System.out.print("Enter the seconds please: ");
-        int totalSeconds = In.nextInt();
-        if(totalSeconds<0)
+        if(In.hasNextInt())
         {
-            System.out.println("Unvalid Value!");
-            
+            int totalSeconds = In.nextInt();
+            In.close();
+            if(totalSeconds<0)
+            {
+                System.out.println("Unvalid Value!");
+                
+            }
+            while(totalSeconds>0)
+            {
+                clearScreen();
+                totalSeconds--;
+                int RemSeconds = totalSeconds % 60;
+                int Minutes = totalSeconds/60;
+                int RemMin = Minutes%60;
+                int Hours = Minutes/60;
+                System.out.println(format.format(Hours)+":"+format.format(RemMin) + ":" + format.format(RemSeconds));
+                Wait(1000);
+            }
+            System.out.println("Ringed!");
         }
-        while(totalSeconds>i)
+        else
         {
             clearScreen();
-            totalSeconds--;
-            int RemSeconds = totalSeconds % 60;
-            int Minutes = totalSeconds/60;
-            int RemMin = Minutes%60;
-            int Hours = Minutes/60;
-            System.out.println(format.format(Hours)+":"+format.format(RemMin) + ":" + format.format(RemSeconds));
-            Wait(1000);
+            System.out.println("Please enter an integer value.");
+            Wait(2000);            
+            Timer();
         }
-        System.out.println("Ringed!");
     }
     public static void Wait(int ms)
     {

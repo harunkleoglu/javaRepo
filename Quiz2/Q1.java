@@ -1,5 +1,6 @@
+package Quiz2;
 import java.util.*;
-public class time {
+public class Q1{
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
@@ -14,6 +15,7 @@ public class time {
 			name = input.nextLine();
 			System.out.println("Your name is "+ name);
 		}
+		input.close();
 		
 	}
 
